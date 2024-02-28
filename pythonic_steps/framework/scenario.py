@@ -28,6 +28,8 @@ class Scenario:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         scenario_steps_list = self.msg_chain[self.msg_chain.index("--") + 1::]
+        # You can extend the logic to use allure or any other given reporters
+        # instead of print:
         print(" ".join(scenario_steps_list))
 
     def name(self, name):

@@ -2,8 +2,8 @@ import re
 
 
 def parse_message_args(message, func, args):
-    pattern = r"{[a-zA-Z]+}"
-    message_args = re.search(r"{[a-zA-Z]+}", message)
+    pattern = r"{[_a-zA-Z]+}"
+    message_args = re.search(r"{[_a-zA-Z]+}", message)
     function_args = func.__code__.co_varnames
     if message_args:
         for reg in message_args.regs:
